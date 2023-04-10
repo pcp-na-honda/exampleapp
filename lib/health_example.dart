@@ -36,18 +36,18 @@ class _HealthAppState extends State<MyHealthPage> {
   Future fetchData() async {
     setState(() => _state = AppState.FETCHING_DATA);
 
-    // define the types to get
+    // 取得するデータのタイプを配列として設定しておく
     final types = [
-      HealthDataType.STEPS,
-      HealthDataType.WEIGHT,
-      HealthDataType.HEIGHT,
-      HealthDataType.BLOOD_GLUCOSE,
-      HealthDataType.WORKOUT,
-      HealthDataType.BLOOD_PRESSURE_DIASTOLIC,
-      HealthDataType.BLOOD_PRESSURE_SYSTOLIC,
-      HealthDataType.SLEEP_IN_BED,//miura++
-      HealthDataType.SLEEP_AWAKE,//miura++
-      HealthDataType.SLEEP_ASLEEP,//miura++
+      HealthDataType.ACTIVE_ENERGY_BURNED,      // 消費エネルギー
+      HealthDataType.BLOOD_PRESSURE_DIASTOLIC,  // 最低血圧
+      HealthDataType.BLOOD_PRESSURE_SYSTOLIC,   // 最高血圧
+      HealthDataType.BODY_FAT_PERCENTAGE,       // 体脂肪率
+      HealthDataType.BODY_TEMPERATURE,          // 体温
+      HealthDataType.STEPS,                     // 歩数
+      HealthDataType.WEIGHT,                    // 体重
+      HealthDataType.SLEEP_IN_BED,              // 就寝時間
+      HealthDataType.SLEEP_AWAKE,               // 就寝開始時間
+      HealthDataType.SLEEP_ASLEEP,              // 起床時間
       // Uncomment these lines on iOS - only available on iOS
       // HealthDataType.AUDIOGRAM
     ];
@@ -61,9 +61,9 @@ class _HealthAppState extends State<MyHealthPage> {
       HealthDataAccess.READ,
       HealthDataAccess.READ,
       HealthDataAccess.READ,
-      HealthDataAccess.READ,//miura++
-      HealthDataAccess.READ,//miura++
-      HealthDataAccess.READ,//miura++
+      HealthDataAccess.READ,
+      HealthDataAccess.READ,
+      HealthDataAccess.READ,
       // HealthDataAccess.READ,
     ];
 
