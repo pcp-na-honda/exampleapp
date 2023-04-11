@@ -48,12 +48,15 @@ class _HealthAppState extends State<MyHealthPage> {
       HealthDataType.SLEEP_IN_BED,              // 就寝時間
       HealthDataType.SLEEP_AWAKE,               // 就寝開始時間
       HealthDataType.SLEEP_ASLEEP,              // 起床時間
+      // HealthDataType.DISTANCE_WALKING_RUNNING,  // ウォーキング+ランニングの距離
+      HealthDataType.DISTANCE_DELTA
       // Uncomment these lines on iOS - only available on iOS
       // HealthDataType.AUDIOGRAM
     ];
 
     // with coresponsing permissions
     final permissions = [
+      HealthDataAccess.READ,
       HealthDataAccess.READ,
       HealthDataAccess.READ,
       HealthDataAccess.READ,
